@@ -24,11 +24,11 @@ const randomIntegerFromInterval = (min, max) => {
 };
 
 function startChangingColors() {
+  refs.startBtn.disabled = 'true';
   intervalId = setInterval(() => {
     const randomColor = randomIntegerFromInterval(0, colors.length - 1);
     refs.body.style.backgroundColor = colors[randomColor];
     console.log(colors[randomColor]);
-    refs.startBtn.disabled = 'true';
   }, 1000);
 }
 
