@@ -24,7 +24,7 @@ const randomIntegerFromInterval = (min, max) => {
 };
 
 function startChangingColors() {
-  refs.startBtn.disabled = 'true';
+  refs.startBtn.disabled = true;
   intervalId = setInterval(() => {
     const randomColor = randomIntegerFromInterval(0, colors.length - 1);
     refs.body.style.backgroundColor = colors[randomColor];
@@ -33,8 +33,7 @@ function startChangingColors() {
 }
 
 function stopChangingColors() {
-  refs.startBtn.removeEventListener;
+  refs.startBtn.disabled = false;
   clearInterval(intervalId);
-  // refs.startBtn.disabled = 'false';
   refs.startBtn.removeAttribute('disabled');
 }
